@@ -1,4 +1,4 @@
-Camilla Polvara,
+Camilla Polvara
 
 Computational Methods in Physics class,
 Semester Fall 2022, 
