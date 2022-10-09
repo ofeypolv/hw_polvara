@@ -26,17 +26,17 @@ def newton(f, x, tol):
     return x
 
 def secant(f, x1, x2, tol):
-    xm = 0; x0 = 0; c = 0
+    xm, x0, c = 0, 0, 0
     if (f(x1) * f(x2) < 0):
         while True:
-            x0 = ((x1 * f(x2) - x2 * f(x1))/(f(x2) - f(x1)))
+            x0 = ((x1*f(x2) - x2*f(x1))/(f(x2) - f(x1)))
             c = f(x1) * f(x0)
             x1 = x2
             x2 = x0
             if (c == 0):
                 break
-            xm = ((x1 * f(x2) - x2 * f(x1))/(f(x2) - f(x1)))
-            if(abs(xm - x0) < tol):
+            xm = ((x1*f(x2) - x2*f(x1))/(f(x2) - f(x1)))
+            if (abs(xm - x0) < tol):
                 break
         return x0
  
