@@ -1,7 +1,7 @@
 import numpy as np
 import astropy.constants as ac
 
-tol = 1e-10
+tol = 1e-15
 G = ac.G.value
 M = ac.M_earth.value
 m = 7.34767309e22
@@ -29,18 +29,16 @@ def secant(f, x1, x2, tol):
     xm = 0; x0 = 0; c = 0
     if (f(x1) * f(x2) < 0):
         while True:
-            x0 = ((x1 * f(x2) - x2 * f(x1)) /
-                            (f(x2) - f(x1)))
+            x0 = ((x1 * f(x2) - x2 * f(x1))/(f(x2) - f(x1)))
             c = f(x1) * f(x0)
             x1 = x2
             x2 = x0
             if (c == 0):
                 break
-            xm = ((x1 * f(x2) - x2 * f(x1)) /
-                            (f(x2) - f(x1)))
+            xm = ((x1 * f(x2) - x2 * f(x1))/(f(x2) - f(x1)))
             if(abs(xm - x0) < tol):
                 break
         return x0
  
 print("The Earth-Moon Lagrangian point L1 computed with the Newton method is {:e} m".format(newton(lagrpt,R/2,tol)))
-print("The Earth-Moon Lagrangian point L1 computed with the secant method is {:e} m".format(secant(lagrpt,2*R/3,100*R/99,tol)))
+print("The Earth-Moon Lagrangian point L1 computed with the secant method is {:e} m".format(secant(lagrpt,R/2,100*R/99,tol)))
