@@ -44,16 +44,6 @@ ref_arg2 = parser.add_argument("perc", type=str,help='Percentage of Fourier coef
 ref_arg3 = parser.add_argument("ft", type=str,help='Type of Fourier transform to use')
 args = parser.parse_args()
 
-'''# raising error in case of wrong args
-if (args.URL != "dow.txt") or (args.URL != "dow2.txt"):
-    raise argparse.ArgumentError(ref_arg1, "please choose between dow.txt and dow2.txt")
-  
-if (args.perc != "10%") or (args.perc != "2%"):
-    raise argparse.ArgumentError(ref_arg2, f'please choose between {2}% and {10}%')
-
-if (args.ft != "DFT") or (args.ft != "DCT"):
-    raise argparse.ArgumentError(ref_arg2, "please choose between DFT and DCT")'''
-
 URL_run = urls.get(args.URL, "")
 perc_run = percs.get(args.perc, "")
 ft_run = fts.get(args.ft, "")
