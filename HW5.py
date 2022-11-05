@@ -6,7 +6,7 @@ import argparse
 
 # ARGUMENTS NEED TO BE ENTERED SEPARATED BY SPACE, dow.txt/dow2.txt 10%/2% CFT/CDT. 
 # For example if I want to use dow.txt, keeping the first 10% of Fourier coefficients and using CFT expansion,
-# I would write >>python HW5.py dow.txt 10% CFT
+# I need to write >>python HW5.py dow.txt 10% CFT
 
 #1D discrete cosine transform
 def dct(y):
