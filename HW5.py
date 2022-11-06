@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import requests
 import argparse
 
-# ARGUMENTS NEED TO BE ENTERED SEPARATED BY SPACE, dow.txt/dow2.txt 10%/2% CFT/CDT. 
+# ARGUMENTS NEED TO BE ENTERED SEPARATED BY SPACE, dow.txt/dow2.txt 10%/2% DFT/DCT. 
 # For example if I want to use dow.txt, keeping the first 10% of Fourier coefficients and using CFT expansion,
 # I need to write >>python HW5.py dow.txt 10% CFT
 
