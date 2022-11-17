@@ -41,7 +41,7 @@ for n in range(N-1):
 
 xdata = locations[:,0]
 ydata = locations[:,1]
-print(len(locations))
+print("The particle has made {} steps in the random walk".format(len(locations)))
 
 fig, ax = plt.subplots(figsize=(8,8))
 ax.set_xlim(-L/2,L/2)
