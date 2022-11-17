@@ -8,7 +8,7 @@ N = int(1e5) #program slows down for N=1e6, so I'm considering N=1e5
 steps = np.array([[0.5,0],[-0.5,0],[0,0.5],[0,-0.5]])
 locations = np.zeros((1,2))
 
-for n in range(N):
+for n in range(N-1):
     if (abs(locations[-1][0]) < L/2) and (abs(locations[-1][1]) < L/2):
         nextloc = [locations[-1] + steps[random.randrange(4)]]
         locations = np.append(locations, nextloc, axis=0)
@@ -56,4 +56,5 @@ anim = animation.FuncAnimation(fig, animate)
 #save as a gif
 #writergif = animation.PillowWriter(fps=30)
 #anim.save('2drandomwalk.gif',writer=writergif)
+plt.title("2D discrete Brownian Motion")
 plt.show()
