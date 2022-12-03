@@ -48,7 +48,7 @@ def ode_RK4(f, u_0, t0, tf, N, m):
 ax = plt.subplot(111)
 
 for mi in ms:
-    u = ode_RK4(U, np.array([x0,v0x,y0,v0y]), t0, tg, 100, mi)
+    u = ode_RK4(U, np.array([x0,v0x,y0,v0y]), t0, tg, N, mi)
     x = [a[0] for a in u]
     y = [a[2] for a in u]
     maxrange = x[np.argmin(np.abs(y[1:]))+1]
