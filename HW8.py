@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 #physical constants + parameters
-ms = [0.25,0.5,1,1.5,2]
+ms = [0.25,0.5,1.,1.5,2.]
 R = 0.08
 rho = 1.22
 C = 0.47
